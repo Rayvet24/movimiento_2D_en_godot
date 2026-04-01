@@ -8,11 +8,12 @@ gradient = SubResource("Gradient_453f1")
 fill_from = Vector2(0, 0.02173913)
 
 [node name="Platform" type="Node2D" unique_id=1505565618]
+position = Vector2(120, 69)
+metadata/_edit_group_ = true
 
 [node name="Area" type="Area2D" parent="." unique_id=791874452]
 
 [node name="Collision" type="CollisionShape2D" parent="Area" unique_id=1417158081]
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=972221119]
-position = Vector2(82, 85)
 texture = SubResource("GradientTexture2D_y362q")

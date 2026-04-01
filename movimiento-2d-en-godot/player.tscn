@@ -2,12 +2,23 @@
 
 [ext_resource type="Texture2D" uid="uid://bjeysos7aocq8" path="res://spritesheet.png" id="1_4flbx"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
+size = Vector2(41, 94.5)
+
 [node name="Player" type="Area2D" unique_id=48319274]
+position = Vector2(-18, -30)
+gravity_point = true
+gravity_point_unit_distance = 1.0
+gravity_point_center = Vector2(1, 1)
+gravity_direction = Vector2(1, 1)
+metadata/_edit_group_ = true
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1763303889]
+position = Vector2(191.5, 550.25)
+shape = SubResource("RectangleShape2D_4flbx")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=2022361919]
-position = Vector2(195.00002, 537)
+position = Vector2(195, 538.00006)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_4flbx")
 hframes = 4

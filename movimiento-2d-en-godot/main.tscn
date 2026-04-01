@@ -2,10 +2,49 @@
 
 [ext_resource type="PackedScene" uid="uid://dumvaagjq3ket" path="res://player.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://c0tqyo3h6uwua" path="res://platforms.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b5dx1amm37k6c" path="res://lamp.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node" unique_id=1667012830]
 
 [node name="Player" parent="." unique_id=1860331272 instance=ExtResource("1_0xm2m")]
 
 [node name="Platform" parent="." unique_id=1505565618 instance=ExtResource("2_h2yge")]
-position = Vector2(87, 150)
+position = Vector2(575, 643)
+scale = Vector2(18.640001, 1)
+
+[node name="Platform2" parent="." unique_id=1328967918 instance=ExtResource("2_h2yge")]
+position = Vector2(616, 455)
+scale = Vector2(2.92, 0.52)
+
+[node name="Platform3" parent="." unique_id=466359760 instance=ExtResource("2_h2yge")]
+position = Vector2(908, 315)
+scale = Vector2(2.92, 0.52)
+
+[node name="Platform4" parent="." unique_id=1519505207 instance=ExtResource("2_h2yge")]
+position = Vector2(568, 1)
+scale = Vector2(18.319998, 1)
+
+[node name="Platform5" parent="." unique_id=1255411789 instance=ExtResource("2_h2yge")]
+position = Vector2(-3, 315)
+scale = Vector2(1, 11.24)
+
+[node name="Platform6" parent="." unique_id=1539957024 instance=ExtResource("2_h2yge")]
+position = Vector2(1160, 323)
+scale = Vector2(1, 11.039999)
+
+[node name="BootsButton" type="Button" parent="." unique_id=105930657]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "BootsButton"
+
+[node name="Lamp" parent="." unique_id=143739474 instance=ExtResource("3_h2yge")]
+position = Vector2(329, 289)
