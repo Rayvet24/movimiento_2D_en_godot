@@ -6,9 +6,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 size = Vector2(42, 99)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(63, 20)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_606se"]
 atlas = ExtResource("1_4flbx")
 region = Rect2(0, 192, 48, 48)
@@ -122,7 +119,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_air",
-"speed": 11.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -220,23 +217,30 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(60.5, 24)
+
 [node name="Player" type="CharacterBody2D" unique_id=1389205224]
 collision_layer = 2
 script = ExtResource("1_onrkg")
-min_jump_force = -217
 metadata/_edit_group_ = true
 
 [node name="BodyCollision" type="CollisionShape2D" parent="." unique_id=1763303889]
 position = Vector2(-3, 10.5)
 shape = SubResource("RectangleShape2D_4flbx")
 
-[node name="AttackCollision" type="CollisionShape2D" parent="." unique_id=795435882]
-position = Vector2(33, -4)
-shape = SubResource("RectangleShape2D_onrkg")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2038741746]
 texture_filter = 1
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_606se")
-animation = &"walk"
-frame_progress = 0.28319156
+animation = &"attack_grounded"
+frame = 7
+frame_progress = 1.0
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=487673750]
+
+[node name="AttackCollision" type="CollisionShape2D" parent="Hitbox" unique_id=795435882]
+position = Vector2(31.75, -3)
+shape = SubResource("RectangleShape2D_onrkg")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

@@ -7,18 +7,18 @@
 [node name="Main" type="Node" unique_id=1667012830]
 
 [node name="Player" parent="." unique_id=1389205224 instance=ExtResource("1_0xm2m")]
-position = Vector2(232, 543)
+position = Vector2(606, 392)
 
 [node name="Platform" parent="." unique_id=1505565618 instance=ExtResource("2_h2yge")]
 position = Vector2(575, 643)
 scale = Vector2(18.640001, 1)
 
 [node name="Platform2" parent="." unique_id=1328967918 instance=ExtResource("2_h2yge")]
-position = Vector2(616, 455)
+position = Vector2(623.00006, 484.99997)
 scale = Vector2(2.92, 0.52)
 
 [node name="Platform3" parent="." unique_id=466359760 instance=ExtResource("2_h2yge")]
-position = Vector2(908, 315)
+position = Vector2(920.00006, 365)
 scale = Vector2(2.92, 0.52)
 
 [node name="Platform4" parent="." unique_id=1519505207 instance=ExtResource("2_h2yge")]
@@ -48,4 +48,7 @@ size_flags_vertical = 4
 text = "BootsButton"
 
 [node name="Lamp" parent="." unique_id=143739474 instance=ExtResource("3_h2yge")]
-position = Vector2(329, 289)
+position = Vector2(429, 291)
+
+[node name="Lamp2" parent="." unique_id=2125361707 instance=ExtResource("3_h2yge")]
+position = Vector2(200, 416)
