@@ -6,12 +6,12 @@
 size = Vector2(64, 64)
 
 [node name="Lamp" type="Area2D" unique_id=143739474]
-position = Vector2(244, 249)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=857592856]
 shape = SubResource("RectangleShape2D_uno5e")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1375395824]
+modulate = Color(15.576772, 12.322876, 0, 1)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_bekw5")

@@ -119,7 +119,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_air",
-"speed": 10.0
+"speed": 13.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -148,7 +148,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_grounded",
-"speed": 13.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -206,7 +206,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 8.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -233,9 +233,8 @@ shape = SubResource("RectangleShape2D_4flbx")
 texture_filter = 1
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_606se")
-animation = &"attack_grounded"
-frame = 7
-frame_progress = 1.0
+animation = &"walk"
+frame_progress = 0.91765666
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=487673750]
 

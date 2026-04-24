@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cfj4cmnuv8udp"]
+
+[ext_resource type="Texture2D" uid="uid://bxo01o1l18kg0" path="res://icon.svg" id="1_lbdsv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkoic"]
+size = Vector2(128, 128)
+
+[node name="PowerUp" type="Area2D" unique_id=1248573739]
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=257138651]
+shape = SubResource("RectangleShape2D_mkoic")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1057998983]
+modulate = Color(2.7639198, 4.1724997, 18.892157, 1)
+texture = ExtResource("1_lbdsv")
