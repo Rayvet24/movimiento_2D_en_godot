@@ -15,6 +15,10 @@ run/main_scene="uid://d3ou3kegumbus"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[global_group]
+
+PowerUps=""
+
 [input]
 
 move_left={

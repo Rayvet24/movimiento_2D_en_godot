@@ -7,17 +7,26 @@ extends CharacterBody2D
 
 var can_jump: bool #si puede saltar
 var attacking: bool #si está atacando
+var hook_is_active: bool #si el gancho esta activo
+
 # control + k comentar varias lineas
+
+func _on_hurtbox_area_entered(area: Area2D) -> void: #si toca el power up
+	if area.is_in_group("PowerUps"):
+		hook_is_active = true
+		area.queue_free() # elimina el nodo del árbol de nodos
+
 
 func _on_hitbox_area_entered(area: Area2D) -> void: #si hitbox toca un area como lamp, puede saltar
 	can_jump = true
 	jump_time = 0.0
 
-func check_overlapping_areas():
+func check_overlapping_areas(): #como la colisión se puede activar una vez dentro del area, la señal no funciona, para es caso tenemos este
 	var overlapping = $Hitbox.get_overlapping_areas()
 	for area in overlapping:
 		can_jump = true
 		jump_time = 0.0
+
 
 func _physics_process(delta) -> void:
 	
@@ -77,6 +86,8 @@ func _physics_process(delta) -> void:
 	else:
 		if velocity.y < 0: #si no esta en piso y sube pone anim de saltar
 			$AnimatedSprite2D.play("jump_start")
+		if is_on_wall() and hook_is_active:
+			$AnimatedSprite2D.play("wall_hang")
 		else: #si no esta en piso y baja anim de cayendo
 			$AnimatedSprite2D.play("jump_end")
 	
@@ -87,5 +98,12 @@ func _physics_process(delta) -> void:
 		$Hitbox/AttackCollision.disabled = false
 		check_overlapping_areas()
 	else: $Hitbox/AttackCollision.disabled = true
+	
+	
+	if hook_is_active:
+		if is_on_wall() and !is_on_floor():
+			velocity.y = 0  #se mantiene en la pared
+			can_jump = true
+			jump_time = 0.0
 	
 	move_and_slide()

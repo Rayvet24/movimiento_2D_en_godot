@@ -6,12 +6,13 @@
 size = Vector2(128, 128)
 
 [node name="Enemy" type="RigidBody2D" unique_id=1481387523]
-scale = Vector2(0.4, 0.8)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=135322175]
+scale = Vector2(0.4, 0.8)
 shape = SubResource("RectangleShape2D_4gyqm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1986616355]
 modulate = Color(5.2618666, 0, 0, 1)
+scale = Vector2(0.4, 0.8)
 texture = ExtResource("1_7k104")

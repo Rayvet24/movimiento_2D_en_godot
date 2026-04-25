@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkoic"]
 size = Vector2(128, 128)
 
-[node name="PowerUp" type="Area2D" unique_id=1248573739]
+[node name="PowerUp" type="Area2D" unique_id=1248573739 groups=["PowerUps"]]
 scale = Vector2(0.5, 0.5)
 metadata/_edit_group_ = true
 
