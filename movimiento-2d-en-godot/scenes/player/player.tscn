@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://dumvaagjq3ket"]
+[gd_scene format=3 uid="uid://cwpnltfb8tp2c"]
 
-[ext_resource type="Texture2D" uid="uid://bjeysos7aocq8" path="res://spritesheet.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://bw8pf6db8yy4w" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" path="res://spritesheet.png" id="1_4flbx"]
+[ext_resource type="Script" path="res://player.gd" id="1_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 size = Vector2(42, 99)
@@ -218,13 +218,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(60.5, 24)
+size = Vector2(43, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 size = Vector2(35, 99)
 
 [node name="Player" type="CharacterBody2D" unique_id=1389205224]
-collision_layer = 2
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_onrkg")
 metadata/_edit_group_ = true
 
@@ -237,12 +238,11 @@ texture_filter = 1
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_606se")
 animation = &"walk"
-frame_progress = 0.91765666
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=487673750]
 
 [node name="AttackCollision" type="CollisionShape2D" parent="Hitbox" unique_id=795435882]
-position = Vector2(31.75, -3)
+position = Vector2(40.5, -3)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=2118596893]

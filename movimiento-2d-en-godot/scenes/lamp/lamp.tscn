@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://b5dx1amm37k6c"]
+[gd_scene format=3 uid="uid://e1koghk13sya"]
 
-[ext_resource type="Texture2D" uid="uid://bxo01o1l18kg0" path="res://icon.svg" id="1_bekw5"]
+[ext_resource type="Texture2D" uid="uid://wj0hrrd0dh0" path="res://assets/icon.svg" id="1_bekw5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uno5e"]
 size = Vector2(64, 64)
 
-[node name="Lamp" type="Area2D" unique_id=143739474]
+[node name="Lamp" type="Area2D" unique_id=143739474 groups=["HitableObjects"]]
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=857592856]

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bon5f0fro7agg"]
+
+[ext_resource type="PackedScene" uid="uid://cwpnltfb8tp2c" path="res://scenes/player/player.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c0tqyo3h6uwua" path="res://scenes/objetos_entorno/objetos_entorno.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://e1koghk13sya" path="res://scenes/lamp/lamp.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cfj4cmnuv8udp" path="res://scenes/power_up/power_up.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bj02cuhiwulws" path="res://scenes/enemy/enemy.tscn" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bp6td00dfoj7p" path="res://scenes/platforms/platforms.tscn" id="6_7mycd"]
+
+[node name="Main" type="Node" unique_id=1667012830]
+
+[node name="Player" parent="." unique_id=1389205224 instance=ExtResource("1_0xm2m")]
+position = Vector2(606, 392)
+
+[node name="Platform" parent="." unique_id=1505565618 instance=ExtResource("2_h2yge")]
+position = Vector2(575, 643)
+scale = Vector2(18.640001, 1)
+
+[node name="Platform4" parent="." unique_id=1519505207 instance=ExtResource("2_h2yge")]
+position = Vector2(568, 1)
+scale = Vector2(18.319998, 1)
+
+[node name="Platform5" parent="." unique_id=1255411789 instance=ExtResource("2_h2yge")]
+position = Vector2(-3, 315)
+scale = Vector2(1, 11.24)
+
+[node name="Platform6" parent="." unique_id=1539957024 instance=ExtResource("2_h2yge")]
+position = Vector2(1160, 323)
+scale = Vector2(1, 11.039999)
+
+[node name="Lamp" parent="." unique_id=143739474 instance=ExtResource("3_h2yge")]
+position = Vector2(429, 291)
+
+[node name="Lamp2" parent="." unique_id=2125361707 instance=ExtResource("3_h2yge")]
+position = Vector2(200, 416)
+
+[node name="PowerUp" parent="." unique_id=1248573739 instance=ExtResource("4_lquwl")]
+position = Vector2(916, 561)
+
+[node name="Enemy" parent="." unique_id=1481387523 instance=ExtResource("5_7mycd")]
+position = Vector2(984, 291)
+
+[node name="Platforms" parent="." unique_id=1491521282 instance=ExtResource("6_7mycd")]
+position = Vector2(920, 365.00003)
+scale = Vector2(1.4799976, 0.23999634)
+
+[node name="Platforms2" parent="." unique_id=420016669 instance=ExtResource("6_7mycd")]
+position = Vector2(623, 485)
+scale = Vector2(1.48, 0.24)
+
+[node name="Platforms3" parent="." unique_id=1258050713 instance=ExtResource("6_7mycd")]
+position = Vector2(917, 518.99994)
+scale = Vector2(1.7200024, 0.24000214)

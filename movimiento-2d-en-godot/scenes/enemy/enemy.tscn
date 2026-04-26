@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://bj02cuhiwulws"]
 
-[ext_resource type="Texture2D" uid="uid://bxo01o1l18kg0" path="res://icon.svg" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://wj0hrrd0dh0" path="res://assets/icon.svg" id="1_7k104"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
 size = Vector2(128, 128)
 
-[node name="Enemy" type="RigidBody2D" unique_id=1481387523]
+[node name="Enemy" type="RigidBody2D" unique_id=1481387523 groups=["HitableObjects"]]
+collision_layer = 6
+collision_mask = 7
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=135322175]

@@ -10,8 +10,8 @@ fill_from = Vector2(0, 0.02173913)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_453f1"]
 size = Vector2(65, 65)
 
-[node name="Platform" type="StaticBody2D" unique_id=1454577148]
-collision_mask = 0
+[node name="ObjetosEntorno" type="StaticBody2D" unique_id=1454577148]
+collision_mask = 4
 metadata/_edit_group_ = true
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=972221119]
