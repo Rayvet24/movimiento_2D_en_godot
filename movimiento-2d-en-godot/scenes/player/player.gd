@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+#el bueno
 @export var speed = 325 #para mover por x
 @export var gravity = 980
 @export var jump_force = 100 #para mover por y
@@ -17,10 +17,14 @@ func _on_hurtbox_area_entered(area: Area2D) -> void: #si hurtbox toca el power u
 		area.queue_free() # elimina el nodo del árbol de nodos
 
 
-func _on_hitbox_area_entered(area: Area2D) -> void: #si hitbox toca un hitable object como lamp, puede saltar
-	if area.is_in_group("HitableObjects"):
+func _on_hitbox_area_entered(area: Area2D) -> void: 
+	if area.is_in_group("HitableObjects"): #si hitbox toca un hitable object, puede saltar
 		can_jump = true
 		jump_time = 0.0
+#=====================================
+#	if area.is_in_group("Enemies"): #si toca un enemy, lo elimina
+#		area.queue_free()
+#=====================================
 
 func check_overlapping_areas(): #como la colisión se puede activar una vez dentro del area, la señal no funciona, para es caso tenemos este
 	var overlapping = $Hitbox.get_overlapping_areas()
@@ -31,6 +35,8 @@ func check_overlapping_areas(): #como la colisión se puede activar una vez dent
 
 
 func _physics_process(delta) -> void:
+	
+	$Camera2D.position = position #que la camara siga al player todo el tiempo
 	
 	if !is_on_floor(): #si no esta en el piso se activa gravedad
 		velocity.y += gravity * delta 
@@ -61,11 +67,10 @@ func _physics_process(delta) -> void:
 	
 	#=====================================
 	#if Input.is_action_pressed("down") and Input.is_action_pressed("jump") and is_on_floor():
-		#set_collision_mask_value(2, false)
-		#if falling_time < 0.05:
-			#set_collision_mask_value(2, true)
+	#	set_collision_mask_value(2, false)
 	#buscar manera de que al cambiar de mask
 	#volverla a activar asi se puede apoyar en la otra plataforma
+	#set_collision_mask_value(2, true)
 	#=====================================
 	
 	
@@ -93,18 +98,21 @@ func _physics_process(delta) -> void:
 		if is_on_floor(): velocity.x = 0
 		if !$AnimatedSprite2D.is_playing():
 			attacking = false
-	else: if is_on_floor(): #si no esta atacando
+	elif is_on_floor(): #si no esta atacando
 		if input_dir != 0: #si no esta quieto poner anim de correr
 			$AnimatedSprite2D.play("walk")
 		else: #si esta quieto idle
 			$AnimatedSprite2D.play("idle")
 	else:
-		if velocity.y < 0: #si no esta en piso y sube pone anim de saltar
-			$AnimatedSprite2D.play("jump_start")
 		if is_on_wall() and hook_is_active:
 			$AnimatedSprite2D.play("wall_hang")
-		else: #si no esta en piso y baja anim de cayendo
-			$AnimatedSprite2D.play("jump_end")
+		elif velocity.y < 0: #si no esta en piso y sube pone anim de saltar
+			$AnimatedSprite2D.play("jump_start")
+		else: $AnimatedSprite2D.play("jump_end")
+	#=====================================
+	#la anim de cuando sube no funca, nose por que
+	#capaz porque moví los archivos?
+	#=====================================
 	
 	#$Hitbox/AttackCollision.disabled = true
 	#$ se pone ruta en este caso el nodo y su hijo el cual queremos el metodo

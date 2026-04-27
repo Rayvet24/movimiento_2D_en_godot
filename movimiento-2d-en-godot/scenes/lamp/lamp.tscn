@@ -6,6 +6,7 @@
 size = Vector2(64, 64)
 
 [node name="Lamp" type="Area2D" unique_id=143739474 groups=["HitableObjects"]]
+collision_mask = 4
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=857592856]

@@ -9,45 +9,129 @@
 
 [node name="Main" type="Node" unique_id=1667012830]
 
-[node name="Player" parent="." unique_id=1389205224 instance=ExtResource("1_0xm2m")]
-position = Vector2(606, 392)
-
-[node name="Platform" parent="." unique_id=1505565618 instance=ExtResource("2_h2yge")]
-position = Vector2(575, 643)
-scale = Vector2(18.640001, 1)
-
-[node name="Platform4" parent="." unique_id=1519505207 instance=ExtResource("2_h2yge")]
-position = Vector2(568, 1)
-scale = Vector2(18.319998, 1)
-
-[node name="Platform5" parent="." unique_id=1255411789 instance=ExtResource("2_h2yge")]
-position = Vector2(-3, 315)
-scale = Vector2(1, 11.24)
-
-[node name="Platform6" parent="." unique_id=1539957024 instance=ExtResource("2_h2yge")]
-position = Vector2(1160, 323)
-scale = Vector2(1, 11.039999)
-
-[node name="Lamp" parent="." unique_id=143739474 instance=ExtResource("3_h2yge")]
-position = Vector2(429, 291)
-
-[node name="Lamp2" parent="." unique_id=2125361707 instance=ExtResource("3_h2yge")]
-position = Vector2(200, 416)
-
 [node name="PowerUp" parent="." unique_id=1248573739 instance=ExtResource("4_lquwl")]
-position = Vector2(916, 561)
+position = Vector2(5767, 543)
 
-[node name="Enemy" parent="." unique_id=1481387523 instance=ExtResource("5_7mycd")]
-position = Vector2(984, 291)
+[node name="Player" parent="." unique_id=1389205224 instance=ExtResource("1_0xm2m")]
+position = Vector2(128, 545)
 
-[node name="Platforms" parent="." unique_id=1491521282 instance=ExtResource("6_7mycd")]
-position = Vector2(920, 365.00003)
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1764326841]
+position = Vector2(-3, -6)
+process_callback = 0
+position_smoothing_enabled = true
+
+[node name="Lamps" type="Node" parent="." unique_id=1624224901]
+
+[node name="Lamp" parent="Lamps" unique_id=143739474 instance=ExtResource("3_h2yge")]
+position = Vector2(1669, 268)
+
+[node name="Lamp2" parent="Lamps" unique_id=174448387 instance=ExtResource("3_h2yge")]
+position = Vector2(2578, 383)
+
+[node name="Lamp3" parent="Lamps" unique_id=2003079214 instance=ExtResource("3_h2yge")]
+position = Vector2(4466, -70)
+
+[node name="Lamp4" parent="Lamps" unique_id=287776652 instance=ExtResource("3_h2yge")]
+position = Vector2(4908, -70)
+
+[node name="Lamp5" parent="Lamps" unique_id=904088906 instance=ExtResource("3_h2yge")]
+position = Vector2(7926, -367)
+
+[node name="Platforms" type="Node" parent="." unique_id=1167029433]
+
+[node name="Platforms" parent="Platforms" unique_id=1491521282 instance=ExtResource("6_7mycd")]
+position = Vector2(1493, 507.99997)
 scale = Vector2(1.4799976, 0.23999634)
 
-[node name="Platforms2" parent="." unique_id=420016669 instance=ExtResource("6_7mycd")]
-position = Vector2(623, 485)
-scale = Vector2(1.48, 0.24)
+[node name="Platforms2" parent="Platforms" unique_id=1258050713 instance=ExtResource("6_7mycd")]
+position = Vector2(4234, 270)
+scale = Vector2(1.4, 0.2)
 
-[node name="Platforms3" parent="." unique_id=1258050713 instance=ExtResource("6_7mycd")]
-position = Vector2(917, 518.99994)
-scale = Vector2(1.7200024, 0.24000214)
+[node name="Platforms3" parent="Platforms" unique_id=1057728648 instance=ExtResource("6_7mycd")]
+position = Vector2(4238, 477)
+scale = Vector2(1.4, 0.2)
+
+[node name="Platforms4" parent="Platforms" unique_id=369501899 instance=ExtResource("6_7mycd")]
+position = Vector2(7925, -179)
+scale = Vector2(1.4, 0.2)
+
+[node name="Enemies" type="Node" parent="." unique_id=418221770]
+
+[node name="Enemy" parent="Enemies" unique_id=1481387523 instance=ExtResource("5_7mycd")]
+position = Vector2(3274, 175)
+
+[node name="Enemy2" parent="Enemies" unique_id=428864016 instance=ExtResource("5_7mycd")]
+position = Vector2(3709, 19)
+
+[node name="Enemy3" parent="Enemies" unique_id=434575508 instance=ExtResource("5_7mycd")]
+position = Vector2(7928, -258)
+
+[node name="ObjetosDeEntorno" type="Node" parent="." unique_id=1910274789]
+
+[node name="ObjetosEntorno" parent="ObjetosDeEntorno" unique_id=1505565618 instance=ExtResource("2_h2yge")]
+position = Vector2(-15.000002, 342.00003)
+scale = Vector2(1, 10.12)
+
+[node name="ObjetosEntorno2" parent="ObjetosDeEntorno" unique_id=1454577148 instance=ExtResource("2_h2yge")]
+position = Vector2(4536, 644)
+scale = Vector2(142.11124, 1)
+
+[node name="ObjetosEntorno3" parent="ObjetosDeEntorno" unique_id=2090420755 instance=ExtResource("2_h2yge")]
+position = Vector2(836, 570)
+scale = Vector2(1, 1.5599964)
+
+[node name="ObjetosEntorno4" parent="ObjetosDeEntorno" unique_id=1310492254 instance=ExtResource("2_h2yge")]
+position = Vector2(1360, 541)
+scale = Vector2(1, 2.6399977)
+
+[node name="ObjetosEntorno5" parent="ObjetosDeEntorno" unique_id=2038078151 instance=ExtResource("2_h2yge")]
+position = Vector2(2111, 431)
+scale = Vector2(4.8949904, 5.732311)
+
+[node name="ObjetosEntorno6" parent="ObjetosDeEntorno" unique_id=802632132 instance=ExtResource("2_h2yge")]
+position = Vector2(3270, 424)
+scale = Vector2(12.306184, 5.8309484)
+
+[node name="ObjetosEntorno7" parent="ObjetosDeEntorno" unique_id=1640591259 instance=ExtResource("2_h2yge")]
+position = Vector2(3904, 358)
+scale = Vector2(7.849168, 8.552699)
+
+[node name="ObjetosEntorno8" parent="ObjetosDeEntorno" unique_id=1837803376 instance=ExtResource("2_h2yge")]
+position = Vector2(5275, 349)
+scale = Vector2(1, 8.5199995)
+
+[node name="ObjetosEntorno9" parent="ObjetosDeEntorno" unique_id=572676035 instance=ExtResource("2_h2yge")]
+position = Vector2(5649, -10)
+scale = Vector2(5.1620183, 14.846965)
+
+[node name="ObjetosEntorno10" parent="ObjetosDeEntorno" unique_id=870754548 instance=ExtResource("2_h2yge")]
+position = Vector2(5821.9995, 430)
+scale = Vector2(9.36, 1)
+
+[node name="ObjetosEntorno11" parent="ObjetosDeEntorno" unique_id=1659354757 instance=ExtResource("2_h2yge")]
+position = Vector2(6046, -341)
+scale = Vector2(7.759583, 4.7422204)
+
+[node name="ObjetosEntorno12" parent="ObjetosDeEntorno" unique_id=1903586754 instance=ExtResource("2_h2yge")]
+position = Vector2(6622.0005, 382)
+scale = Vector2(9.491663, 7.9296637)
+
+[node name="ObjetosEntorno13" parent="ObjetosDeEntorno" unique_id=1177259320 instance=ExtResource("2_h2yge")]
+position = Vector2(6206, 144.00002)
+scale = Vector2(3.5477958, -0.634004)
+
+[node name="ObjetosEntorno14" parent="ObjetosDeEntorno" unique_id=541781653 instance=ExtResource("2_h2yge")]
+position = Vector2(6941, -92)
+scale = Vector2(1, 2.6)
+
+[node name="ObjetosEntorno15" parent="ObjetosDeEntorno" unique_id=1474222507 instance=ExtResource("2_h2yge")]
+position = Vector2(7679, 302)
+scale = Vector2(23.739906, -10.373519)
+
+[node name="ObjetosEntorno16" parent="ObjetosDeEntorno" unique_id=434263348 instance=ExtResource("2_h2yge")]
+position = Vector2(8176.0005, -369)
+scale = Vector2(2.92, 0.48000062)
+
+[node name="ObjetosEntorno17" parent="ObjetosDeEntorno" unique_id=1282523242 instance=ExtResource("2_h2yge")]
+position = Vector2(8642, 133)
+scale = Vector2(13.623394, 15.876034)
