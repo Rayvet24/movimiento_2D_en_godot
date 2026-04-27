@@ -13,7 +13,7 @@
 position = Vector2(5767, 543)
 
 [node name="Player" parent="." unique_id=1389205224 instance=ExtResource("1_0xm2m")]
-position = Vector2(128, 545)
+position = Vector2(4423, 143)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1764326841]
 position = Vector2(-3, -6)
@@ -135,3 +135,19 @@ scale = Vector2(2.92, 0.48000062)
 [node name="ObjetosEntorno17" parent="ObjetosDeEntorno" unique_id=1282523242 instance=ExtResource("2_h2yge")]
 position = Vector2(8642, 133)
 scale = Vector2(13.623394, 15.876034)
+
+[node name="ObjetosEntorno" parent="." unique_id=1960494227 instance=ExtResource("2_h2yge")]
+position = Vector2(4153, 337)
+scale = Vector2(1, 0.52)
+
+[node name="ObjetosEntorno2" parent="." unique_id=685796673 instance=ExtResource("2_h2yge")]
+position = Vector2(4157, 488)
+scale = Vector2(1, 0.48000002)
+
+[node name="ObjetosEntorno3" parent="." unique_id=1860552945 instance=ExtResource("2_h2yge")]
+position = Vector2(7927, -166.99998)
+scale = Vector2(2.3600001, 0.3600003)
+
+[node name="ObjetosEntorno4" parent="." unique_id=504584017 instance=ExtResource("2_h2yge")]
+position = Vector2(4152, 184)
+scale = Vector2(1, 0.36)
